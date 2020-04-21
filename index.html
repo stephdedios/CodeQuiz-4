@@ -20,11 +20,17 @@
           LEADER BOARD
         </a>
       </nav>
+<!-- TIMER BOX -->
+<div id="timerBox">  
+<h4>TIME LEFT <span id="timerDisplay"></span></h4>
+</div>
+
 
  <!-- QUIZ WRAPPER      -->
 <div class="quizContainer">
 <div class="quizBox">
-    <!-- GREETING BOX (START) -->
+    <!-- GREETING BOX -->
+    
     <div id="greetingBox">  
         <h1>CODE QUIZ</h1>
         <h4>Press START to begin this code quiz!</h3>
@@ -35,11 +41,14 @@
     <!-- ACTIVE QUIZ GAME BOX -->
     <div id="activeQuizBox" class="hiddenBox">
         <h4 id="question"></h3>
-        <button id="optionA" class="optionBtn btn btn-secondary btn-lg btn-block"></button>
-        <button id="optionB" class="optionBtn btn btn-secondary btn-lg btn-block"></button>
-        <button id="optionC" class="optionBtn btn btn-secondary btn-lg btn-block"></button>
-        <button id="optionD" class="optionBtn btn btn-secondary btn-lg btn-block"></button>
+        <button id="optionA" class="optionBtn btn-secondary btn-lg btn-block"></button>
+        <button id="optionB" class="optionBtn btn-secondary btn-lg btn-block"></button>
+        <button id="optionC" class="optionBtn btn-secondary btn-lg btn-block"></button>
+        <button id="optionD" class="optionBtn btn-secondary btn-lg btn-block"></button>
+
+        
         <p id="verifyAnswer"></p>
+    
       </div>
 
       <!-- USER DID NOT ANSWER QUESTIONS IN TIME -->
@@ -50,23 +59,26 @@
         </button>
     </div>
 
+    <!-- SUBMIT YOUR SCORE  -->
     <div id="resultsBox" class="hiddenBox">
-            <h2>YOU'VE COMPLETED THE QUIZ ON TIME</h2>
+            <h2 id="completedQuiz">YOU'VE COMPLETED THE QUIZ ON TIME</h2>
             <h2 id="finalScore"></h2>
         <form> 
             <h4>Enter your initials for the leaderboard:</h4>
-
-            <input type="text" id="userName"/>
+            <br>
+            <input id="userName" class="form-control" type="text" placeholder="Enter Name">
             <a
             href="highScore.html"
-            id="submitResults"
+            id="submitScore"
             class="btn btn-secondary btn-lg btn-block"
             >Submit</a>
         </form>
       </div>
+      
 
 </div>
 </div>
+
 
 <!-- LINKS TO JAVASCRIPT FILES & BOOTSTRAP/JQUERY -->
     <script

@@ -1,10 +1,13 @@
 body {
   color: #343a40;
 }
-.timerBox {
-  color: white;
+#timerBox {
+  background-color: white;
+  color: #343a40;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 8px lightslategray, 0 6px 20px 0 black;
 }
-
 .quizBox {
   background-color: white;
   text-align: center;

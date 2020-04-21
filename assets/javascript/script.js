@@ -2,11 +2,11 @@ var startQuiz = document.querySelector(".startQuizBtn");
 var optionBtn = document.querySelectorAll(".optionBtn");
 
 var currentIndex = 0;
-let score = 0;
+var score = 0;
 
 startQuiz.addEventListener("click", function (quizTime) {
-  quizTime.stopPropagation();
-  //   startTimer();
+  event.stopPropagation();
+  startTimer();
 
   document.getElementById("greetingBox").style.display = "none";
   document.getElementById("activeQuizBox").style.display = "block";
@@ -25,16 +25,14 @@ function displayQuestions() {
 }
 
 for (var i = 0; i < optionBtn.length; i++) {
-  optionBtn[i].addEventListener("click", function userAnswer(quizTime) {
-    quizTime.stopPropagation();
+  optionBtn[i].addEventListener("click", function userAnswer(event) {
+    event.stopPropagation();
 
-    if (quizTime.currentTarget === question[currentIndex].answer) {
+    if (event.currentTarget.innerText === quizQuestions[currentIndex].answer) {
       score++;
       console.log(score);
-      document.querySelector("#verifyAnswer").innerHTML = "correct";
     } else {
-      document.querySelector("#verifyAnswer").innerHTML = "wrong";
-      secondsLeft = secondsLeft - 15;
+      secondsLeft = secondsLeft - 10;
     }
     currentIndex++;
 
